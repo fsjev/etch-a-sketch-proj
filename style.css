@@ -1,16 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
 *{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
-.container{
-    border: 1px solid red;
+body{
+    background-color: rgb(224, 224, 224);
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.name{
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 5rem;
+    line-height: 5rem;
+}
+.header-cover{
+    padding: 16px;
+    border-radius: 15px;
+    height: min-content;
+    width: min-content;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 70px;
+    left: 25px;
+}
+.grid-cover{
+    padding: 20px;
+    border-radius: 15px;
+    height: min-content;
+    width: min-content;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .4);
+    margin-top: 70px;
+    position: absolute;
+    left: 420px;
+}
+.container{
+    display: flex;
+    width: 500px;
+    height: 500px;
     flex-wrap: wrap;
 }
 .grid-squares{
-    border: 1px solid red;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: red;
     flex: 1 1 6%;
+}
+.touched{
+    background-color: black;
+}
+#slider{
+    -webkit-appearance: none;
+    border-radius: 50px;
+    height: 3px;
+    background-color: black;
+    margin-bottom: 9px;
+}
+#slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(224, 224, 224);
+    border: 3px solid black;
+}
+#numbers{
+    font-weight: bold;
+    text-align: center;
+}
+.slider-cover{
+    padding: 16px;
+    border-radius: 15px;
+    height: min-content;
+    width: min-content;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 100px;
+    bottom: 300px;
+}
+ion-icon{
+    font-size: 30px;
+    position: relative;
+    bottom: -8px;
+}
+.github{
+    font-weight: bold;
+    position: absolute;
+    left: 281px;
+    bottom: 370px;
 }

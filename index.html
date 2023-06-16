@@ -7,8 +7,31 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
     <title>Etch-a-Sketch</title>
+    <link rel="shortcut icon" href="assets/pencil.svg" type="image/x-icon">
 </head>
 <body>
-    <div class="container" id="container"></div>
+    <div class="left">
+        <div class="header-cover"><span class="name">Etch-a<br>Sketch</span></div>
+        <span class="github">
+            fsjev <ion-icon name="logo-github"></ion-icon>
+        </span>
+        <div class="slider-cover">
+            <input type="range" name="" id="slider" min="1" max="64" value="16">
+            <p id="numbers"></p>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="grid-cover">
+            <div class="container" id="container"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
