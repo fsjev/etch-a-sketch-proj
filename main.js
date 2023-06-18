@@ -6,12 +6,20 @@ let rowSize = slider.value;
 
 makeGrid(rowSize);
 
-slider.addEventListener("mousemove", () => {
-    rowSize = slider.value;
-    let gridSize = rowSize ** 2;
-    if(rowSize !== "1") numbers.innerHTML = `${rowSize} x ${rowSize}<br>${gridSize} squares`;
-    if(rowSize === "1") numbers.innerHTML = `${rowSize} x ${rowSize}<br>${gridSize} square`;
-    makeGrid(rowSize);
+slider.addEventListener("mousedown", () => {
+
+    function mousedown(){
+        rowSize = slider.value;
+        let gridSize = rowSize ** 2;
+        if(rowSize !== "1") numbers.innerHTML = `${rowSize} x ${rowSize}<br>${gridSize} squares`;
+        if(rowSize === "1") numbers.innerHTML = `${rowSize} x ${rowSize}<br>${gridSize} square`;
+        makeGrid(rowSize);
+    };
+    slider.addEventListener("mousemove", mousedown);
+    slider.onmouseup = function(){
+        slider.removeEventListener("mouseover", mousedown);
+    }
+    
 });
 
 
