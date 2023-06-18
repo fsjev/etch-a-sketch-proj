@@ -3,6 +3,7 @@ let numbers = document.getElementById("numbers");
 let body = document.querySelector("body");
 let slider = document.getElementById("slider");
 let rowSize = slider.value;
+let button = document.querySelector("button");
 
 makeGrid(rowSize);
 
@@ -22,6 +23,9 @@ slider.addEventListener("mousedown", () => {
     
 });
 
+button.addEventListener("click", () => {
+    makeGrid(rowSize);
+});
 
 function makeGrid(rowSize){
     gridContainer.innerHTML = "";
