@@ -39,8 +39,23 @@ body{
     flex: 1;
     height: 540px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.upper-right{
+    height: 100%;
+    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
+}
+.lower-right{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    height: 100%;
+    width: 100%;
 }
 .header-cover{
     padding: 16px;
@@ -109,9 +124,6 @@ body{
 }
 .text-icon{
     display: flex;
-    position: absolute;
-    top: 274px;
-    left: 304px;
 }
 ion-icon{
     font-size: 30px;
@@ -158,7 +170,7 @@ button:active{
     #counter{
         text-align: center;
         width: 80%;
-
+        margin-bottom: 20px;
     }
     .container{
         display: flex;
@@ -178,9 +190,9 @@ button:active{
         margin-top: 20px;
     }
     .text-icon{
-        display: flex;
+        /* display: flex;
         position: absolute;
         top: 183px;
-        left: 285px;
+        left: 285px; */
     }
 }
