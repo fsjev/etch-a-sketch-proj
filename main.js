@@ -47,7 +47,7 @@ function makeGrid(rowSize){
     let flexBasis = 100 / rowSize;
 
     for(let div of divArray){
-        div.style.cssText = `border: 1px solid rgb(255, 255, 255);flex: 1 1 ${flexBasis}%;`;
+        div.style.cssText = `flex: 1 1 ${flexBasis}%;`;
         div.setAttribute("class", "untouched");
         gridContainer.appendChild(div);
 
