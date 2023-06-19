@@ -4,8 +4,13 @@ let body = document.querySelector("body");
 let slider = document.getElementById("slider");
 let rowSize = slider.value;
 let button = document.querySelector("button");
+let counter = document.getElementById("counter");
+let touchedDivs = gridContainer.getElementsByClassName("touched");
+
 
 makeGrid(rowSize);
+
+
 
 slider.addEventListener("mousedown", () => {
 
@@ -14,6 +19,7 @@ slider.addEventListener("mousedown", () => {
         let gridSize = rowSize ** 2;
         if(rowSize !== "1") numbers.innerHTML = `${rowSize} x ${rowSize}<br>${gridSize} squares`;
         if(rowSize === "1") numbers.innerHTML = `${rowSize} x ${rowSize}<br>${gridSize} square`;
+        setCounter(touchedDivs, rowSize);
         makeGrid(rowSize);
     };
     slider.addEventListener("mousemove", mousedown);
@@ -25,6 +31,7 @@ slider.addEventListener("mousedown", () => {
 
 button.addEventListener("click", () => {
     makeGrid(rowSize);
+    setCounter(touchedDivs, rowSize);
 });
 
 function makeGrid(rowSize){
@@ -46,13 +53,14 @@ function makeGrid(rowSize){
 
         div.onmousedown = function(e) {
             div.setAttribute("class", "touched");
-
+            setCounter(touchedDivs, rowSize);
             gridContainer.addEventListener('mousemove', onMouseMove);
             
             function onMouseMove(e) {
                 let elemBelow = document.elementFromPoint(e.clientX, e.clientY);
                 elemBelow.setAttribute("class", "touched");
                 
+                setCounter(touchedDivs, rowSize);
             };
             
             gridContainer.onmouseup = function() {
@@ -60,4 +68,8 @@ function makeGrid(rowSize){
             };
         };
     }
+}
+
+function setCounter(touchedDivs, rowSize){
+    counter.textContent = `${touchedDivs.length} of ${rowSize ** 2} squares etched.`;
 }
