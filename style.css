@@ -189,10 +189,15 @@ button:active{
     .header-cover{
         margin-top: 20px;
     }
-    .text-icon{
-        /* display: flex;
-        position: absolute;
-        top: 183px;
-        left: 285px; */
+    .right{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .lower-right{
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        height: 100%;
+        width: 100%;
     }
 }
