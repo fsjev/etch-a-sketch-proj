@@ -161,6 +161,10 @@ button:active{
     justify-content: center;
     align-items: center;
 }
+.active{
+    background-color: black;
+    color: white;
+}
 
 @media(max-width: 768px){
     body{
